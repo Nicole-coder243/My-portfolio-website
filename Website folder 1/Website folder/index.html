@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Makayla's portfolio showcasing projects, hobbies, and web development journey.">
+    <meta name="keywords" content="Makayla, portfolio, developer, creative, web development, Java, Python">
+    <link rel="icon" type="image/png" href="images/Favicon.jpg">
+    <link rel="stylesheet" href="style.css"> <!-- Linking CSS -->
+    <title>Makayla's Portfolio - Developer and Creator</title>
+    <style>
+        /* CSS for the audio elements to hide audio element  */
+        audio {
+            display: none;
+        }
+
+        /* CSS for image gallery */
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            max-width: 400px; /* Set a maximum width */
+            max-height: 300px; /* Set a maximum height */
+            object-fit: cover; /* Ensure images cover the area without distortion */
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <header>
+        <h1> Makayla </h1>
+        <nav class="navbar">
+            <a href="#about">About Me</a>
+            
+            
+            <a href="#contact">Contact Me</a>
+        </nav>
+        <p class="typing"> Aspiring Game Developer | Designer | Creator </p>
+        <button onclick="location.href='#projects-description'">Explore My Work</button>
+        <button id="playButton">Press Play</button>
+    </header>
+
+    <div class="night-sky"></div> <!-- Container for stars -->
+
+    <main>
+        <section id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a creative developer who loves thinking outside the box to build innovative projects. 
+                        Just like a painter uses a brush to bring ideas to life, I use my coding skills to create 
+                        functional and visually appealing experiences. I enjoy coding, learning new technologies, 
+                        and showcasing my progress through hands-on projects.  I have graduated from community college with an associates degree in Electrical Engineering although I have always had a passion for coding and design that what I strive best in. 
+                        <br><br>
+                        Currently, I'm focusing on game development and web development applications, taking a creative 
+                        approach to every task—no matter how big or small.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/Makayla pfp.jpg" alt="Makayla" width="1200" height="630">
+                </div>
+            </div>
+        </section>
+
+
+           
+            <audio id="lofiMusic" controls loop>
+                <source src="music/relaxing-lofi-music-royalty-free-no-copyright-274465.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="introVoice">
+                <source src="music/ttsMP3.com_VoiceText_2025-1-23_10-47-14.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+    
+
+        <section id="projects-description">
+            <h2>Spotlight Highlight</h2>
+            <p> This website is a project I am working on a very personal project I wanted to share  and I am excited to see how it grows.
+                This could be fun development. I used HTML, CSS, and JavaScript to create this website. I also used Canva to design the layout and graphics. I have incorprated to help in guidance with voiceover and making sure  my layout works. If you need anything in AI or how to work or program in it, I am here to help.
+            </p>
+            <div class="image-gallery">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="slider">
+                    <span>
+                        <img src="images/image num 1.PNG" alt="latest project">
+                    <p>You are currently on this website. Although there was a lot of trial and error when creating with Canva, I ultimately choose the color scheme that I found most appealing. I wanted to make a sky with a night theme.This website is me and what I wanted to show and express through small previous and taking on the challenge of creating a website and getting help with copilot and bro code videos in this creation, as well as getting it structured with a navbar, background, and CSS styling. It uses small animation, glow effect, AI voiceover interaction, and a song in one button.</p>
+                    </span>
+                    <span>
+                        <img src="images/Main.java-Desktop-VisualStudioCode2025-02-1916-10-36-ezgif.com-video-to-gif-converter.gif" alt="Project 2">
+                        <p> escape the island text adventure game (Java): This project is a text-based adventure game where the player must escape an island by making choices that affect the outcome of the story. The game will include the following features:
+                            Multiple Endings: Different choices will lead to different outcomes, with multiple possible endings based on the player's decisions.
+                            Inventory System: The player can collect items and use them to solve puzzles or overcome obstacles.
+                            Random Events: Random events will occur throughout the game, adding an element of surprise and challenge.
+                            Storytelling: This text java game  features a compelling narrative with engaging characters and plot twists.
+                            Player Choices: The player's decisions will impact the story, creating a dynamic and interactive experience. </p>
+                        </p>
+                    </span>
+                    <span>
+                        <img src="images/Projects-Replit-GoogleChrome2025-02-1116-50-49-ezgif.com-optimize.gif" alt="Project GIF">
+                        <p>Library Management System (Java): This project involves building a system for managing a library, focusing on object-oriented programming principles such as inheritance, polymorphism, abstraction, and encapsulation. It will include the following components:
+
+                            Books: Class to represent books, with attributes like title, author, and genre. 
+                            Different genres can be handled with inheritance and polymorphism.
+                            Members: Class to manage library members, including borrowing and returning books.
+                            Librarians: Class to handle administrative tasks like checking in/out books and managing member records.
+                            Borrowing/Returning System: Methods to allow members to borrow and return books, with error handling for situations like overdue books or unavailable titles.
+                            Book Genres: Use of inheritance to create subclasses for different types of books (e.g., fiction, non-fiction, textbooks), allowing the system to handle various book categories effectively.</p>
+                    </span>
+                    <span>
+                        <img src="images/timeline.PNG" alt="Project 4">
+                        <p>Timeline of my journey: This project is a  simple visual representation of my coding journey, highlighting milestones, projects, and achievements. The timeline include the following elements:
+
+                            Milestones: Major events in my coding journeyand my journey in general, such as learning new languages, completing projects, and expanding new project lineup and ideas.
+                            Achievements: certifications I have received for my coding skills, such as completing online courses.
+                            Progress: A visual representation of my growth as a coder in word, showing how my skills have evolved over time and where I hope to go next in my coding journey.</p>
+                    </span>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Game Development</li>
+                <li>Web Design</li>
+                <li>AI Intergation</li>
+            </ul>
+        </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>
+                    <img src="images/Intro To Java Certificate.png" alt="Intro to Java Certificate" width="400" height="300">
+                    
+                </li>
+                <li> 
+                    <img src="images/Java Intermediate Certificate.png" alt="Java Intermediate Certificate" width="400" height="300">
+                </li>
+            </ul>
+        </section>
+
+        <section id="tools">
+            <h2>Tools and resources</h2>
+            <a href="https://www.canva.com/" target="_blank" title="My inspiration">Canva magic</a><br>
+            <a href="https://www.w3schools.com/" target="_blank" title="My learning resource">W3Schools</a><br>
+            <a href="https://www.codecademy.com/learn"target="_blank" title="Good learning resource">Codecademy</a>
+
+        </section>
+<section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="https://formspree.io/f/movjbzlv" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          
+            <button type="submit">Send Message</button>
+          </form>
+          
+          <p id="responseMessage"></p>
+    </section>
+    
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio Website. All rights reserved.</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/makayla-sanders-309921268/">LinkedIn</a></li>
+            <li><a href="mailto:makaylans03@gmail.com">Email</a></li>
+            <li><a href="https://replit.com/@makaylans03/Projects#src/main/Game.java">Repl.it</a></li>
+            <li><a href="https://github.com/Nicole-coder243/Nicole-coder243">Github</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function () {
+            const lofiMusic = document.getElementById('lofiMusic');
+            const introVoice = document.getElementById('introVoice');
+    
+            if (lofiMusic.paused) {
+                lofiMusic.play();
+                introVoice.play();
+                this.textContent = "Pause Music";
+            } else {
+                lofiMusic.pause();
+                introVoice.pause();
+                this.textContent = "Press Play";
+            }
+        });
+
+        // Generate stars
+        function generateStars() {
+            const nightSky = document.querySelector('.night-sky');
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                if (Math.random() < 0.3) {
+                    star.classList.add('purple');
+                } else if (Math.random() < 0.3) {
+                    star.classList.add('blue');
+                }
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.left = `${Math.random() * 100}vw`;
+                nightSky.appendChild(star);
+            }
+        }
+
+        generateStars();
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shrink'); // Shrink when scrolling
+            } else {
+                navbar.classList.remove('shrink'); // Restore original size
+            }
+        });
+    </script>
+    <script>
+        let currentSlide = 0;
+        let autoSlideInterval;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.image-gallery .slider span');
+            const totalSlides = slides.length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            document.querySelector('.image-gallery .slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+            resetAutoSlide(); // Reset the auto slide timer when user clicks arrows
+        }
+
+        function autoMoveSlide() {
+            moveSlide(1);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoMoveSlide, 30000); // Change slide every 30 seconds
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            autoSlideInterval = setInterval(autoMoveSlide, 30000); // Start auto slide after 30 seconds
+        });
+    </script>
+    
+    
+</body>
+
+</html>

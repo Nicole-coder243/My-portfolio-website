@@ -1,0 +1,508 @@
+:root {
+    --background-color: #000807; /* Dark background */
+    --primary-text-color: #A2A3BB; /* Light grey text */
+    --accent-color: #9395D3; /* Light purple */
+    --button-link-color: #B3B7EE; /* Light blue */
+    --button-link-hover: #9395D3; /* Light purple on Hover */
+    --section-bg: rgba(147, 149, 211, 0.2); /* Soft light purple background */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color); /* Dark background */
+    font-family: "Playfair Display","Cormorant Garamond", serif;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-text-color); /* Light grey text */
+    font-size: 1em; /* Revert base font size */
+}
+
+/* Header Section */
+header {
+    background-color: none; /* Transparent background */
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    font-size: 2.5em; /* Revert to original font size */
+    margin: 0;
+    color: var(--accent-color); /* Light purple for highlight */
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+header p {
+    font-size: 4em; /* Adjust font size */
+    margin-top: 10px;
+    color: var(--primary-text-color); /* Light grey text */
+}
+
+button {
+    background-color: var(--button-link-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px; /* Adjust font size */
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.1); /* Makes the button grow */
+    box-shadow: 0 5px 15px rgba(179, 183, 238, 0.6); /* Soft glow effect */
+}
+
+/* Links */
+a {
+    color: var(--button-link-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--button-link-hover);
+}
+
+/* Section Styling */
+section {
+    padding: 30px;
+    background-color: none;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+/* Headings */
+section h2, section h3 {
+    margin: 10px 0;
+    font-family: Helvetica, sans-serif;
+    color: var(--accent-color); /* Light purple headings */
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+    transition: text-shadow 0.3s ease-in-out;
+    font-size: 1.5em; /* Adjust font size */
+}
+
+section h2:hover, section h3:hover {
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        max-width: 95%;
+        padding: 20px;
+    }
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Moves it slightly down */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Keyframe animation for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.typing {
+    font-size: 50px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Parallax container */
+.parallax {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Avoids interfering with clicks */
+}
+
+/* Stars */
+.star, .flower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Stars */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    animation: twinkle 3s infinite alternate ease-in-out;
+}
+
+.star.purple {
+    background-color: var(--accent-color); /* Light purple */
+    box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+.star.blue {
+    background-color: var(--button-link-color); /* Light blue */
+    box-shadow: 0 0 10px var(--button-link-color), 0 0 20px var(--button-link-color), 0 0 30px var(--button-link-color);
+}
+
+
+
+/* Twinkling stars */
+@keyframes twinkle {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.7; transform: scale(1); }
+}
+
+.star {
+    animation: twinkle 3s infinite alternate ease-in-out;
+}
+
+/* Flowers fading in and out */
+@keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+
+/* Shooting star effect */
+.shooting-star {
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    border-radius: 50%;
+    opacity: 0;
+    transform: rotate(-45deg);
+}
+
+@keyframes shoot {
+    0% {
+        top: -10px;
+        left: 70%;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        left: 30%;
+        opacity: 0;
+    }
+}
+
+/* General Section Styling */
+#about {
+    padding: 40px 20px;
+    background-color: var(--section-bg); /* Soft light purple background */
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+    gap: 20px; /* Space between text and image */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    color: var(--primary-text-color); /* Light grey text */
+    order: 1; /* Ensure text is on the left */
+}
+
+.about-text h2 {
+    color: var(--accent-color); /* Light purple */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-color), 0 0 5px var(--accent-color);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.about-text h2:hover {
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+.about-text p {
+    font-size: 1.2em; /* Adjust font size */
+    color: var(--primary-text-color); /* Light grey */
+}
+
+/* Image Styling */
+.about-image {
+    flex: 1;
+    max-width: 500px; /* Limit image size */
+    text-align: center;
+    order: 2; /* Ensure image is on the right */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow around image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        text-align: center; /* Center text and image */
+    }
+
+    .about-text, .about-image {
+        flex: none;
+        margin-bottom: 20px; /* Add spacing between sections when stacked */
+    }
+
+    .about-image img {
+        width: 80%; /* Limit the width of the image on smaller screens */
+    }
+}
+
+/* Fade-in effect for the About Me section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.about-text h2, p {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Spotlight Highlight Section */
+#projects-description h2 {
+    font-size: 2.5em; /*  This will Increase text size */
+}
+.projects-description p {
+    font-size: 1.3em; /* Adjust font size */
+   
+}
+
+#skills ul li, #certifications ul li {
+    font-size: 1.2em; /* Adjust font size */
+}
+
+#certifications ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px; /* Space between list items */
+}
+
+#certifications ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and image */
+}
+
+#certifications ul li img {
+    width: 400px; /* Increase image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+footer p {
+    font-size: 1em; /* Adjust font size */
+}
+
+footer ul li a {
+    font-size: 1em; /* Adjust font size */
+}
+
+/* 3D Rotating Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.image-gallery .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-gallery span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    min-width: 100%;
+}
+
+.image-gallery p {
+    margin-top: 10px;
+    color: var(--primary-text-color);
+    text-align: left; /* Align text to the left */
+    max-width: 100%; /* Allow text to extend fully */
+    white-space: normal; /* Ensure text wraps normally */
+}
+
+.image-gallery img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+}
+
+
+.image-gallery .prev, .image-gallery .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--primary-text-color); /* Match text color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.image-gallery .prev {
+    left: 10px;
+}
+
+.image-gallery .next {
+    right: 10px;
+}
+
+/* Contact Form Styling */
+#contact {
+    padding: 40px 20px;
+    background-color: var(--section-bg); /* Soft light purple background */
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    color: var(--accent-color); /* Light purple */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-color), 0 0 5px var(--accent-color);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+#contact h2:hover {
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact label {
+    margin-top: 10px;
+    font-size: 1.2em; /* Adjust font size */
+    color: var(--primary-text-color); /* Light grey text */
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em; /* Adjust font size */
+    background-color: #f9f9f9;
+}
+
+#contact button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--button-link-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact button:hover {
+    transform: scale(1.1); /* Makes the button grow */
+    box-shadow: 0 5px 15px rgba(179, 183, 238, 0.6); /* Soft glow effect */
+}
+
+#responseMessage {
+    margin-top: 20px;
+    font-size: 1.2em; /* Adjust font size */
+    color: var(--primary-text-color); /* Light grey text */
+}
