@@ -420,6 +420,14 @@ footer ul li a {
     height: auto;
 }
 
+.image-gallery .text-container {
+    max-width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
+    border-radius: 5px;
+    margin-top: 10px;
+    color: var(--primary-text-color); /* Ensure text color matches theme */
+}
 
 .image-gallery .prev, .image-gallery .next {
     position: absolute;
