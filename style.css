@@ -427,6 +427,8 @@ footer ul li a {
     border-radius: 5px;
     margin-top: 10px;
     color: var(--primary-text-color); /* Ensure text color matches theme */
+    overflow: auto; /* Ensure text is not cut off */
+    max-height: 150px; /* Set a maximum height to prevent overflow */
 }
 
 .image-gallery .prev, .image-gallery .next {
