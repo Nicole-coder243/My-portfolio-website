@@ -429,9 +429,12 @@ footer ul li a {
     border-radius: 5px;
     margin-top: 10px;
     color: var(--primary-text-color); /* Ensure text color matches theme */
-    overflow: auto; /* Ensure text is not cut off */
+    overflow-y: auto; /* Ensure text is not cut off */
     max-height: 150px; /* Set a maximum height to prevent overflow */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .image-gallery .prev, .image-gallery .next {
