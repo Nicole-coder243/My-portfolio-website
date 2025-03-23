@@ -440,3 +440,100 @@ footer ul li a {
     font-size: 1.2em; /* Adjust font size */
     color: var(--primary-text-color); /* Light grey text */
 }
+
+/* Image Gallery Section */
+#image-gallery {
+    padding: 40px 20px;
+    background-color: var(--section-bg); /* Soft light purple background */
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#image-gallery h2 {
+    color: var(--accent-color); /* Light purple */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-color), 0 0 5px var(--accent-color);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+#image-gallery h2:hover {
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+/* 3D Rotating Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.image-gallery .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-gallery span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    min-width: 100%;
+}
+
+.image-gallery p {
+    margin-top: 10px;
+    color: var(--primary-text-color);
+    text-align: left; /* Align text to the left */
+    max-width: 100%; /* Allow text to extend fully */
+    white-space: normal; /* Ensure text wraps normally */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery .text-container {
+    max-width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
+    border-radius: 5px;
+    margin-top: 10px;
+    color: var(--primary-text-color); /* Ensure text color matches theme */
+    overflow: auto; /* Ensure text is not cut off */
+    max-height: 150px; /* Set a maximum height to prevent overflow */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.image-gallery .prev, .image-gallery .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--primary-text-color); /* Match text color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.image-gallery .prev {
+    left: 10px;
+}
+
+.image-gallery .next {
+    right: 10px;
+}
