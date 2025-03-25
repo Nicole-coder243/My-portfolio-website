@@ -479,27 +479,15 @@ footer ul li a {
 .image-gallery .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
-.image-gallery span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-    transform-style: preserve-3d;
-    transition: transform 1s;
+.image-gallery .slide {
     min-width: 100%;
+    box-sizing: border-box;
 }
 
-.image-gallery p {
-    margin-top: 10px;
-    color: var(--primary-text-color);
-    text-align: left; /* Align text to the left */
-    max-width: 100%; /* Allow text to extend fully */
-    white-space: normal; /* Ensure text wraps normally */
-}
-
-.image-gallery img {
+.image-gallery .slide img {
     width: 100%;
     height: auto;
     border-radius: 10px;
