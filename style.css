@@ -526,3 +526,16 @@ footer ul li a {
 .image-gallery .next {
     right: 10px;
 }
+
+.image-group {
+    display: flex;
+    gap: 10px; /* Space between the images */
+    justify-content: center;
+}
+
+.image-group img {
+    width: 48%; /* Adjust width to fit two images side by side */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
