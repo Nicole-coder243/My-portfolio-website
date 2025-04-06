@@ -548,37 +548,37 @@ footer ul li a {
     }
 
     header h1 {
-        font-size: 2em; /* Reduce header font size */
+        font-size: 1.8em; /* Further reduce header font size */
     }
 
     header p {
-        font-size: 1.5em; /* Reduce subheader font size */
+        font-size: 1.2em; /* Further reduce subheader font size */
     }
 
     button {
-        font-size: 14px; /* Adjust button font size */
-        padding: 8px 16px; /* Reduce button padding */
+        font-size: 12px; /* Smaller button font size */
+        padding: 6px 12px; /* Compact button padding */
     }
 
     section {
-        padding: 15px; /* Reduce section padding */
+        padding: 10px; /* Reduce section padding further */
     }
 
     section h2, section h3 {
-        font-size: 1.2em; /* Reduce heading font size */
+        font-size: 1em; /* Smaller heading font size */
     }
 
     .about-container {
         flex-direction: column; /* Stack content vertically */
-        gap: 15px; /* Adjust spacing between elements */
+        gap: 10px; /* Reduce spacing between elements */
     }
 
     .about-image img {
-        width: 100%; /* Ensure image takes full width */
+        width: 90%; /* Slightly smaller image width */
     }
 
     .image-gallery .slide img {
-        max-height: 300px; /* Reduce image height for smaller screens */
+        max-height: 250px; /* Further reduce image height */
     }
 
     .image-group img {
@@ -586,6 +586,6 @@ footer ul li a {
     }
 
     footer p, footer ul li a {
-        font-size: 0.9em; /* Reduce footer font size */
+        font-size: 0.8em; /* Smaller footer font size */
     }
 }
