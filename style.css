@@ -539,3 +539,53 @@ footer ul li a {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive Design for Phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9em; /* Slightly smaller font size for better readability */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce header font size */
+    }
+
+    header p {
+        font-size: 1.5em; /* Reduce subheader font size */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 16px; /* Reduce button padding */
+    }
+
+    section {
+        padding: 15px; /* Reduce section padding */
+    }
+
+    section h2, section h3 {
+        font-size: 1.2em; /* Reduce heading font size */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack content vertically */
+        gap: 15px; /* Adjust spacing between elements */
+    }
+
+    .about-image img {
+        width: 100%; /* Ensure image takes full width */
+    }
+
+    .image-gallery .slide img {
+        max-height: 300px; /* Reduce image height for smaller screens */
+    }
+
+    .image-group img {
+        width: 100%; /* Make images stack vertically */
+    }
+
+    footer p, footer ul li a {
+        font-size: 0.9em; /* Reduce footer font size */
+    }
+}
