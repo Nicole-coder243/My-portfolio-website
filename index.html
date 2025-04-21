@@ -10,30 +10,29 @@
     <link rel="stylesheet" href="style.css"> <!-- Linking CSS -->
     <title>Makayla's Portfolio - Developer and Creator</title>
     <style>
-        /* CSS for the audio elements to hide audio element  */
+        /* Hide audio elements */
         audio {
             display: none;
         }
-
-    
     </style>
 </head>
 
 <body>
     <header>
-        <h1> Makayla </h1>
+        <h1>Makayla</h1>
         <nav class="navbar">
             <a href="#about">About Me</a>
             <a href="#contact">Contact Me</a>
         </nav>
-        <p class="typing"> Aspiring Developer | Designer | Creator </p>
-        <button onclick="location.href='#projects-description'">Explore My Work</button>
-        <button id="playButton">Press Play</button>
+        <p class="typing">Aspiring Developer | Designer | Creator</p>
+        <button onclick="location.href='#projects-description'">Discover My Work</button>
+        <button id="playButton">Play Music</button>
     </header>
 
-    <div class="night-sky"></div> <!-- Container for stars -->
+    <div class="night-sky"></div> <!-- Starry background -->
 
     <main>
+        <!-- About Section -->
         <section id="about">
             <div class="about-container">
                 <div class="about-text">
@@ -42,9 +41,10 @@
                         I'm a creative developer who loves thinking outside the box to build innovative projects. 
                         Just like a painter uses a brush to bring ideas to life, I use my coding skills to create 
                         functional and visually appealing experiences. I enjoy coding, learning new technologies, 
-                        and showcasing my progress through hands-on projects. I have graduated from community college with an associates degree in Electrical Engineering although I have always had a passion for coding and design that what I strive best in. 
+                        and showcasing my progress through hands-on projects. I have graduated with an associate's degree 
+                        in Electrical Engineering, but my passion lies in coding and design.
                         <br><br>
-                        Currently, I'm focusing on game development and web development applications, taking a creative 
+                        Currently, I'm focusing on game development and web applications, taking a creative 
                         approach to every task—no matter how big or small.
                     </p>
                 </div>
@@ -54,6 +54,7 @@
             </div>
         </section>
 
+        <!-- Audio Section -->
         <section>
             <audio id="lofiMusic" controls loop>
                 <source src="music/relaxing-lofi-music-royalty-free-no-copyright-274465.mp3" type="audio/mpeg">
@@ -63,11 +64,13 @@
             </audio>
         </section>
 
+        <!-- Spotlight Section -->
         <section id="projects-description">
             <h2>Spotlight Highlight</h2>
             <p>This website is a personal project that I am excited to share. I used HTML, CSS, and JavaScript to create this website, and Canva to design the layout and graphics. I have incorporated voiceover guidance to ensure my layout works. If you need help with AI or programming, I am here to assist.</p>
         </section>
 
+        <!-- Image Gallery Section -->
         <section id="image-gallery">
             <h2>Works</h2>
             <div class="image-gallery">
@@ -138,6 +141,7 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills">
             <h2>Skills</h2>
             <ul>
@@ -146,10 +150,12 @@
                 <li>Java</li>
                 <li>Python</li>
                 <li>Game Development</li>
-                <li> Responsive Web Design</li>
-                <li>AI Intergation</li>
+                <li>Responsive Web Design</li>
+                <li>AI Integration</li>
             </ul>
         </section>
+
+        <!-- Certifications Section -->
         <section id="certifications">
             <h2>Certifications</h2>
             <ul>
@@ -162,12 +168,15 @@
             </ul>
         </section>
 
+        <!-- Tools Section -->
         <section id="tools">
             <h2>Tools and resources</h2>
             <a href="https://www.canva.com/" target="_blank" title="My inspiration">Canva magic</a><br>
             <a href="https://www.w3schools.com/" target="_blank" title="My learning resource">W3Schools</a><br>
             <a href="https://www.codecademy.com/learn"target="_blank" title="Good learning resource">Codecademy</a>
         </section>
+
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Me</h2>
             <form id="contactForm" action="https://formspree.io/f/movjbzlv" method="POST">
@@ -205,7 +214,7 @@
             } else {
                 lofiMusic.pause();
                 introVoice.pause();
-                this.textContent = "Press Play";
+                this.textContent = "Play Music";
             }
         });
 
@@ -227,18 +236,18 @@
         }
 
         generateStars();
-    </script>
-    <script>
+
+        // Navbar shrink on scroll
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.classList.add('shrink'); // Shrink when scrolling
+                navbar.classList.add('shrink');
             } else {
-                navbar.classList.remove('shrink'); // Restore original size
+                navbar.classList.remove('shrink');
             }
         });
-    </script>
-    <script>
+
+        // Image gallery slider
         let currentSlide = 0;
 
         function moveSlide(direction) {

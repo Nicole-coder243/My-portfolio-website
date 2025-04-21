@@ -55,6 +55,7 @@ button {
 button:hover {
     transform: scale(1.1); /* Makes the button grow */
     box-shadow: 0 5px 15px rgba(179, 183, 238, 0.6); /* Soft glow effect */
+    background-color: var(--button-link-hover); /* Subtle color change */
 }
 
 /* Links */
@@ -88,7 +89,8 @@ section h2, section h3 {
 }
 
 section h2:hover, section h3:hover {
-    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+    text-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color), 0 0 45px var(--accent-color);
+    color: var(--button-link-hover); /* Subtle color change */
 }
 
 /* Responsive Design */
@@ -450,6 +452,7 @@ footer ul li a {
     border-radius: 10px;
     max-width: 900px;
     margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow for depth */
 }
 
 #image-gallery h2 {
@@ -463,17 +466,16 @@ footer ul li a {
     text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
 }
 
-/* 3D Rotating Image Gallery */
+/* Image Gallery Container */
 .image-gallery {
     display: flex;
     justify-content: center;
-    perspective: 1000px;
-    margin-top: 50px;
     align-items: center;
     position: relative;
-    width: 80%;
-    margin: 50px auto;
+    width: 100%;
     overflow: hidden;
+    margin-top: 30px;
+    border-radius: 10px; /* Rounded corners */
 }
 
 .image-gallery .slider {
@@ -485,28 +487,38 @@ footer ul li a {
 .image-gallery .slide {
     min-width: 100%;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .image-gallery .slide img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-height: 500px; /* Increased maximum height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for images */
+    max-height: 500px; /* Limit image height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery .slide img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 .image-gallery .text-container {
-    max-width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
+    max-width: 90%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for better readability */
     border-radius: 5px;
     margin-top: 10px;
     color: var(--primary-text-color); /* Ensure text color matches theme */
-    overflow: auto; /* Ensure text is not cut off */
-    max-height: 150px; /* Set a maximum height to prevent overflow */
+    overflow: auto; /* Prevent text overflow */
+    max-height: 150px; /* Limit text container height */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 1em; /* Adjust font size for readability */
+    line-height: 1.5; /* Improve text spacing */
 }
 
+/* Navigation Buttons */
 .image-gallery .prev, .image-gallery .next {
     position: absolute;
     top: 50%;
@@ -517,6 +529,7 @@ footer ul li a {
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .image-gallery .prev {
@@ -527,17 +540,41 @@ footer ul li a {
     right: 10px;
 }
 
+.image-gallery .prev:hover, .image-gallery .next:hover {
+    background-color: var(--button-link-hover); /* Subtle hover effect */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Image Group for Multiple Images */
 .image-group {
     display: flex;
     gap: 10px; /* Space between the images */
     justify-content: center;
+    flex-wrap: wrap; /* Wrap images on smaller screens */
 }
 
 .image-group img {
     width: 48%; /* Adjust width to fit two images side by side */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-group img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .image-gallery .slide img {
+        max-height: 300px; /* Reduce image height for smaller screens */
+    }
+
+    .image-group img {
+        width: 100%; /* Stack images vertically */
+    }
 }
 
 /* Responsive Design for Phones */
