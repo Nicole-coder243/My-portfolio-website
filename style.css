@@ -147,26 +147,6 @@ section h2:hover, section h3:hover {
     }
 }
 
-/* Parallax container */
-.parallax {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    pointer-events: none; /* Avoids interfering with clicks */
-}
-
-/* Stars */
-.star, .flower {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-
 /* Stars */
 .star {
     position: absolute;
@@ -188,53 +168,11 @@ section h2:hover, section h3:hover {
     box-shadow: 0 0 10px var(--button-link-color), 0 0 20px var(--button-link-color), 0 0 30px var(--button-link-color);
 }
 
-
-
 /* Twinkling stars */
 @keyframes twinkle {
     0% { opacity: 0.7; transform: scale(1); }
     50% { opacity: 1; transform: scale(1.2); }
     100% { opacity: 0.7; transform: scale(1); }
-}
-
-.star {
-    animation: twinkle 3s infinite alternate ease-in-out;
-}
-
-/* Flowers fading in and out */
-@keyframes fade {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-
-
-/* Shooting star effect */
-.shooting-star {
-    position: fixed;
-    top: -10px;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background-color: white;
-    box-shadow: 0 0 10px white;
-    border-radius: 50%;
-    opacity: 0;
-    transform: rotate(-45deg);
-}
-
-@keyframes shoot {
-    0% {
-        top: -10px;
-        left: 70%;
-        opacity: 1;
-    }
-    100% {
-        top: 100%;
-        left: 30%;
-        opacity: 0;
-    }
 }
 
 /* General Section Styling */
@@ -624,5 +562,121 @@ footer ul li a {
 
     footer p, footer ul li a {
         font-size: 0.8em; /* Smaller footer font size */
+    }
+}
+
+/* Responsive Design for Fun Projects */
+@media (max-width: 768px) {
+    .fun-projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fun-project {
+        max-width: 90%;
+    }
+
+    .fun-project .image-group img {
+        width: 100%; /* Stack images vertically */
+    }
+}
+
+/* FCC Projects Section */
+#fcc-projects {
+    padding: 40px 20px;
+    background-color: var(--section-bg); /* Soft light purple background */
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow for depth */
+}
+
+#fcc-projects h2 {
+    color: var(--accent-color); /* Light purple */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-color), 0 0 5px var(--accent-color);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+#fcc-projects h2:hover {
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+.fcc-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fcc-gallery .slide {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for better readability */
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fcc-gallery .slide:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.fcc-gallery .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.fcc-gallery .slide .image-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.fcc-gallery .slide .image-group img {
+    width: 48%; /* Adjust width to fit two images side by side */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.fcc-gallery .slide .text-container {
+    color: var(--primary-text-color); /* Light grey text */
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.fcc-gallery .slide .text-container a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--button-link-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.fcc-gallery .slide .text-container a:hover {
+    color: var(--button-link-hover);
+}
+
+/* Responsive Design for FCC Projects */
+@media (max-width: 768px) {
+    .fcc-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fcc-gallery .slide {
+        max-width: 90%;
+    }
+
+    .fcc-gallery .slide .image-group img {
+        width: 100%; /* Stack images vertically */
     }
 }
