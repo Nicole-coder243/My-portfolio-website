@@ -44,18 +44,18 @@ header p {
 button {
     background-color: var(--button-link-color);
     color: white;
-    padding: 10px 20px;
-    font-size: 16px; /* Adjust font size */
+    padding: 12px 24px;
+    font-size: 16px;
     border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.1); /* Makes the button grow */
-    box-shadow: 0 5px 15px rgba(179, 183, 238, 0.6); /* Soft glow effect */
-    background-color: var(--button-link-hover); /* Subtle color change */
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(179, 183, 238, 0.6);
+    background-color: var(--button-link-hover);
 }
 
 /* Links */
@@ -69,13 +69,46 @@ a:hover {
     color: var(--button-link-hover);
 }
 
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--button-link-hover); /* Highlight color */
+}
+
 /* Section Styling */
 section {
-    padding: 30px;
-    background-color: none;
-    margin: 20px auto;
+    padding: 40px;
+    background-color: var(--section-bg);
+    margin: 30px auto;
     max-width: 900px;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Headings */
@@ -88,16 +121,32 @@ section h2, section h3 {
     font-size: 1.5em; /* Adjust font size */
 }
 
+section h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+}
+
 section h2:hover, section h3:hover {
     text-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color), 0 0 45px var(--accent-color);
     color: var(--button-link-hover); /* Subtle color change */
 }
 
+section h2:hover {
+    text-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     section {
-        max-width: 95%;
         padding: 20px;
+        max-width: 95%;
+    }
+
+    section h2 {
+        font-size: 1.5em;
     }
 }
 
@@ -307,12 +356,38 @@ section h2:hover, section h3:hover {
     height: auto; /* Maintain aspect ratio */
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+}
+
 footer p {
     font-size: 1em; /* Adjust font size */
 }
 
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 footer ul li a {
     font-size: 1em; /* Adjust font size */
+}
+
+footer a {
+    color: var(--button-link-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--button-link-hover);
 }
 
 /* Contact Form Styling */
@@ -558,6 +633,11 @@ footer ul li a {
 
     .image-group img {
         width: 100%; /* Make images stack vertically */
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
     footer p, footer ul li a {

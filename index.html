@@ -7,199 +7,67 @@
     <meta name="description" content="Makayla's portfolio showcasing projects, hobbies, and web development journey.">
     <meta name="keywords" content="Makayla, portfolio, developer, creative, web development, Java, Python">
     <link rel="icon" type="image/png" href="images/Favicon.jpg">
-    <link rel="stylesheet" href="style.css"> <!-- Linking CSS -->
-    <title>Makayla's Portfolio - Developer and Creator</title>
-    <style>
-        /* Hide audio elements */
-        audio {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Makayla's Portfolio</title>
 </head>
 
 <body>
     <header>
-        <h1>Makayla</h1>
+        <h1>Makayla's Portfolio</h1>
         <nav class="navbar">
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact Me</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-        <p class="typing">Aspiring Developer | Designer | Creator</p>
-        <button onclick="location.href='#projects-description'">Discover My Work</button>
-        <button id="playButton">Play Music</button>
-        <button onclick="location.href='#fcc-projects'">FCC Projects</button>
+        <p class="typing">Developer | Designer | Creator</p>
+        <button onclick="location.href='#works'">Explore My Work</button>
     </header>
-
-    <div class="night-sky"></div> <!-- Starry background -->
 
     <main>
         <!-- About Section -->
         <section id="about">
-            <div class="about-container">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>
-                        I'm a creative developer who loves thinking outside the box to build innovative projects. 
-                        Just like a painter uses a brush to bring ideas to life, I use my coding skills to create 
-                        functional and visually appealing experiences. I enjoy coding, learning new technologies, 
-                        and showcasing my progress through hands-on projects. I have graduated with an associate's degree 
-                        in Electrical Engineering, but my passion lies in coding and design.
-                        <br><br>
-                        Currently, I'm focusing on game development and web applications, taking a creative 
-                        approach to every task—no matter how big or small.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="images/Makayla pfp.jpg" alt="Makayla" width="1200" height="630">
-                </div>
-            </div>
+            <h2>About Me</h2>
+            <p>
+                I am a passionate developer with a creative mindset, dedicated to building innovative and visually appealing projects. 
+                With a background in Electrical Engineering and a strong focus on coding and design, I bring a unique perspective to web and game development.
+                My journey is fueled by continuous learning and hands-on experience in creating impactful solutions.
+            </p>
         </section>
 
-        <!-- Audio Section -->
-        <section>
-            <audio id="lofiMusic" controls loop>
-                <source src="music/relaxing-lofi-music-royalty-free-no-copyright-274465.mp3" type="audio/mpeg">
-            </audio>
-            <audio id="introVoice">
-                <source src="music/ttsMP3.com_VoiceText_2025-1-23_10-47-14.mp3" type="audio/mpeg">
-            </audio>
-        </section>
-
-        <!-- Spotlight Section -->
-        <section id="projects-description">
-            <h2>Spotlight Highlight</h2>
-            <p>This website is a personal project that I am excited to share. I used HTML, CSS, and JavaScript to create this website, and Canva to design the layout and graphics. I have incorporated voiceover guidance to ensure my layout works. If you need help with AI or programming, I am here to assist.</p>
-        </section>
-
-        <!-- Image Gallery Section -->
-        <section id="image-gallery">
-            <h2>Works</h2>
+        <!-- Works Section -->
+        <section id="works">
+            <h2>My Works</h2>
             <div class="image-gallery">
                 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                 <div class="slider">
+                    <!-- Slide 1 -->
                     <div class="slide">
                         <img src="images/image num 1.PNG" alt="Project 1">
                         <div class="text-container">
-                            <pre>Welcome to my portfolio! Built with a structured navbar, background, and CSS styling, it reflects my creativity and growth. With help from Copilot and Bro Code tutorials, I brought it to life, adding animations, a glow effects, AI voiceover interaction, and a music button.</pre>
-                            <pre>Showcasing some work/project I contribute to.</pre>
+                            <p>Welcome to my portfolio! This project showcases my creativity and growth, featuring animations, glow effects, and AI voiceover interaction.</p>
                         </div>
                     </div>
+                    <!-- Slide 2 -->
                     <div class="slide">
                         <img src="images/image num 2.PNG" alt="Project 2">
                         <div class="text-container">
-                            <pre>This project focuses on exception handling by simulating in-game errors. It includes custom exceptions for scenarios like InsufficientHealthException, OutOfManaException, and InvalidActionException, ensuring smooth error handling in gameplay.</pre>
-                            <pre><a href="https://replit.com/@makaylans03/Projects#src/main/Game.java" target="_blank">Play Live Demo of the exception handling</a></pre>
+                            <p>An exception handling project simulating in-game errors with custom exceptions for smooth gameplay.</p>
+                            <a href="https://replit.com/@makaylans03/Projects#src/main/Game.java" target="_blank">View Live Demo</a>
                         </div>
                     </div>
+                    <!-- Slide 3 -->
                     <div class="slide">
                         <img src="images/Main.java-Desktop-VisualStudioCode2025-02-1916-10-36-ezgif.com-video-to-gif-converter.gif" alt="Project 3">
                         <div class="text-container">
-                            <pre>My first text adventure in java called escape the island where choices and endings depend on the way the player plays through choices. This will determine your HP, thinking, bravery, and etc. Can you escape the island?</pre>
-                            <pre><a href="https://replit.com/@makaylans03/Escape-the-Island-Game" target="_blank">Play Live Demo</a></pre>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="images/Projects-Replit-GoogleChrome2025-02-1116-50-49-ezgif.com-optimize.gif" alt="Project 4">
-                        <div class="text-container">
-                            <pre>A custom made Library management system called "cloud hill" demonstrating the principals of Object-Oriented Programming.</pre>
-                            <pre><a href="https://replit.com/@makaylans03/Projects#src/main/java/Main.java" target="_blank">Play Live Demo of cloud hill Library</a></pre>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="images/ador web.PNG" alt="Project 5">
-                        <div class="text-container">
-                            <pre>I contributed to the A Dose of Reveal podcast website, helping with its structure, design, and interactive features. This includes AI integration to enhance user experience, ensuring smooth navigation and engagement.</pre>
-                            <pre><a href="https://www.adoseofreveal.org/" target="_blank">Visit the website</a></pre>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="images/Capture90.PNG" alt="Project 6">
-                        <div class="text-container">
-                            <pre>In addition to my work on the podcast website, I designed and developed a fully functional Shopify store for A Dose of Reveal Wellness Shop.</pre>
-                            <pre><a href="https://adoseofrevealwellness.myshopify.com/" target="_blank">Visit the Shopify Store</a></pre>
+                            <p>A text adventure game in Java where choices determine the player's journey and outcomes. Can you escape the island?</p>
+                            <a href="https://replit.com/@makaylans03/Escape-the-Island-Game" target="_blank">Play Now</a>
                         </div>
                     </div>
                 </div>
                 <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>Game Development</li>
-                <li>Responsive Web Design</li>
-                <li>AI Integration</li>
-            </ul>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                <li>
-                    <img src="images/Intro To Java Certificate.png" alt="Intro to Java Certificate" width="400" height="300">
-                </li>
-                <li> 
-                    <img src="images/Java Intermediate Certificate.png" alt="Java Intermediate Certificate" width="400" height="300">
-                </li>
-            </ul>
-        </section>
-
-
-        <!-- FCC Projects Section -->
-        <section id="fcc-projects">
-            <h2>FCC Projects</h2>
-            <div class="fcc-gallery">
-                <div class="slide">
-                    <img src="images/Survery.PNG" alt="Marvel-Themed Survey Form">
-                    <div class="text-container">
-                        <p>This is an FCC certification project where I created a survey form with a Marvel theme. It showcases my creativity and attention to detail.</p>
-                        <a href="https://www.freecodecamp.org/Makayla-Coder" target="_blank">View Project on timeline for better look</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="image-group">
-                        <img src="images/tributept1.PNG" alt="Hogwarts Tribute - Part 1">
-                        <img src="images/tributept2.PNG" alt="Hogwarts Tribute - Part 2">
-                    </div>
-                    <div class="text-container">
-                        <p>This is an FCC certification project—a tribute page dedicated to Hogwarts Castle. (Hint: I love Harry Potter!)</p>
-                        <a href="https://www.freecodecamp.org/Makayla-Coder" target="_blank">View Project on timeline for better look</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="images/technical-documentation.PNG" alt="Technical Documentation Page">
-                    <div class="text-container">
-                        <p>This is an FCC certification project where I created a technical documentation page for podcasting. It demonstrates my ability to structure content and design a clean, user-friendly layout.</p>
-                        <a href="https://www.freecodecamp.org/Makayla-Coder" target="_blank">View Project on timeline for better look</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="image-group">
-                        <img src="images/product landing-1head.PNG" alt="Product Landing header">
-                        <img src="images/product landing-1.PNG" alt="Product Landing Page - Part 1">
-                        <img src="images/product landing-2.PNG" alt="Product Landing Page - Part 2">
-                    </div>
-                    <div class="text-container">
-                        <p>This is an FCC certification project—a product landing page inspired by a dose of reveal so check it out a dose of reveal they are amazing!</p>
-                        <a href="https://www.freecodecamp.org/Makayla-Coder" target="_blank">View Project on timeline for better look</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tools Section -->
-        <section id="tools">
-            <h2>Tools and resources</h2>
-            <a href="https://www.canva.com/" target="_blank" title="My inspiration">Canva magic</a><br>
-            <a href="https://www.w3schools.com/" target="_blank" title="My learning resource">W3Schools</a><br>
-            <a href="https://www.codecademy.com/learn"target="_blank" title="Good learning resource">Codecademy</a>
         </section>
 
         <!-- Contact Section -->
@@ -212,67 +80,21 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit">Send</button>
             </form>
-            <p id="responseMessage"></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 My Portfolio Website. All rights reserved.</p>
+        <p>&copy; 2025 Makayla's Portfolio. All rights reserved.</p>
         <ul>
             <li><a href="https://www.linkedin.com/in/makayla-sanders-309921268/">LinkedIn</a></li>
-            <li><a href="mailto:makaylans03@gmail.com">Email Me</a></li>
-            <li><a href="https://replit.com/@makaylans03">Repl.it</a></li>
-            <li><a href="https://github.com/Nicole-coder243/Nicole-coder243">Github</a></li>
+            <li><a href="mailto:makaylans03@gmail.com">Email</a></li>
+            <li><a href="https://github.com/Nicole-coder243/Nicole-coder243">GitHub</a></li>
         </ul>
     </footer>
 
     <script>
-        document.getElementById('playButton').addEventListener('click', function () {
-            const lofiMusic = document.getElementById('lofiMusic');
-            const introVoice = document.getElementById('introVoice');
-
-            if (lofiMusic.paused) {
-                lofiMusic.play();
-                introVoice.play();
-                this.textContent = "Pause Music";
-            } else {
-                lofiMusic.pause();
-                introVoice.pause();
-                this.textContent = "Play Music";
-            }
-        });
-
-        // Generate stars
-        function generateStars() {
-            const nightSky = document.querySelector('.night-sky');
-            for (let i = 0; i < 200; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
-                if (Math.random() < 0.3) {
-                    star.classList.add('purple');
-                } else if (Math.random() < 0.3) {
-                    star.classList.add('blue');
-                }
-                star.style.top = `${Math.random() * 100}vh`;
-                star.style.left = `${Math.random() * 100}vw`;
-                nightSky.appendChild(star);
-            }
-        }
-
-        generateStars();
-
-        // Navbar shrink on scroll
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shrink');
-            } else {
-                navbar.classList.remove('shrink');
-            }
-        });
-
         // Image gallery slider
         let currentSlide = 0;
 
