@@ -107,8 +107,6 @@ section {
     background-color: var(--section-bg); /* Light gray background */
     margin: 30px auto;
     max-width: 900px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Headings */
@@ -192,58 +190,44 @@ footer ul li a:hover {
 
 /* Image Gallery Section */
 .image-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
     margin-top: 30px;
-    border-radius: 10px; /* Rounded corners */
     background-color: var(--section-bg); /* Light gray background */
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     gap: 20px; /* Space between elements */
-}
-
-.image-gallery .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    gap: 20px; /* Space between slides */
-}
-
-.image-gallery .slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
 }
 
 .image-gallery .slide img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for images */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .image-gallery .slide img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .image-gallery .text-container {
     max-width: 90%;
     padding: 15px;
     background-color: var(--background-color); /* White background for text */
-    border-radius: 5px;
     margin-top: 10px;
     color: var(--primary-text-color); /* Dark gray text */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     font-size: 1em;
     line-height: 1.5;
     text-align: left;
+}
+
+.image-gallery .text-container a {
+    color: var(--button-link-color); /* Gray links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.image-gallery .text-container a:hover {
+    color: var(--button-link-hover); /* Black on hover */
 }
 
 /* Navigation Buttons */
@@ -256,9 +240,7 @@ footer ul li a:hover {
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .image-gallery .prev {
@@ -277,7 +259,7 @@ footer ul li a:hover {
 /* Responsive Design for Image Gallery */
 @media (max-width: 768px) {
     .image-gallery {
-        flex-direction: column; /* Stack elements vertically */
+        grid-template-columns: 1fr; /* Single column on smaller screens */
         padding: 15px;
     }
 
