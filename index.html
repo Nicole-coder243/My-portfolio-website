@@ -30,7 +30,7 @@
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I am a passionate developer with a creative mindset, dedicated to building innovative and visually appealing projects. 
+                Hi, I'm Makayla! I'm a passionate developer with a love for creating engaging web experiences.Creative and adaptable web and game developer with hands-on experience in Java, JavaScript, and UI/UX design. Skilled in building interactive digital experiences, integrating AI tools, and developing e-commerce solutions. Proven ability to deliver user-centered products through strong problem-solving and critical thinking skills. Eager to contribute innovative ideas and technical expertise to dynamic development teams.
                 With a background in Electrical Engineering and a strong focus on coding and design, I bring a unique perspective to web and game development.
                 My journey is fueled by continuous learning and hands-on experience in creating impactful solutions.
             </p>
@@ -71,47 +71,52 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="contact">
             <h2>Contact Me</h2>
-            <form id="contactForm" action="https://formspree.io/f/movjbzlv" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <form id="contactForm" action="https://formspree.io/f/movjbzlv" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+
+                <!-- Let's Connect Section -->
+                <div class="connect">
+                    <h3>Let's Connect</h3>
+                    <p>Feel Free To Reach Out/Check Out Via:</p>
+                    <ul class="contact-list">
+                        <li>
+                            <a href="mailto:makaylans03@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/makayla-sanders-309921268/" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://replit.com/@makaylans03" target="_blank">
+                                <i class="fas fa-code"></i> Replit
+                            </a>
+                        </li>
+                        <li>
+                            <a id="profile-link" href="https://www.freecodecamp.org/Makayla-Coder" target="_blank">
+                                <i class="fas fa-user"></i> FCC Profile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <section id="contact" class="contact">
-            <h2>Let's connect</h2>
-            <p>Feel Free To Reach Out/Check Out Via:</p>
-            <ul class="contact-list">
-                <li>
-                    <a href="mailto:makaylans03@gmail.com" target="_blank">
-                        <i class="fas fa-envelope"></i> Email
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/makayla-sanders-309921268/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href="https://replit.com/@makaylans03" target="_blank">
-                        <i class="fas fa-code"></i> Replit 
-                    </a>
-                </li>
-                <li>
-                    <a id="profile-link" href="https://www.freecodecamp.org/Makayla-Coder" target="_blank">
-                        <i class="fas fa-user"></i> FCC Profile
-                    </a>
-                </li>
-            </ul>
-        </section>
     </footer>
 
     <script>
