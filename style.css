@@ -102,6 +102,42 @@ a:hover {
     color: var(--button-link-hover); /* Highlight color */
 }
 
+/* Navbar Styling */
+#navbar {
+    background-color: var(--background-color); /* Use existing dark background color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+
+#nav-ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#navbar a {
+    padding: 2.2rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--primary-text-color); /* Use existing light grey text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#navbar a:hover {
+    background-color: var(--button-link-hover); /* Use existing hover color */
+    color: var(--background-color); /* Contrast text color on hover */
+}
+
 /* Section Styling */
 section {
     padding: 40px;
@@ -110,6 +146,28 @@ section {
     max-width: 900px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome Section */
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--section-bg); /* Use existing section background color */
+}
+
+#welcome-section p {
+    font-size: 20px;
+    color: var(--primary-text-color); /* Use existing light grey text color */
+}
+
+#welcome-section h1 {
+    color: var(--accent-color); /* Use existing accent color */
+    font-size: 40px;
+    font-weight: 700;
 }
 
 /* Headings */
@@ -139,6 +197,47 @@ section h2:hover {
     text-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color);
 }
 
+/* Projects Section */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.project-tile {
+    background-color: #3a3a3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add subtle shadow on hover */
+}
+
+.projects {
+    background-color: #2e2e2e;
+    color: var(--primary-text-color); /* Use existing light grey text color */
+    margin: 0;
+    padding: 10rem 2rem;
+    font-size: 30px;
+}
+
+.project-tile img {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     section {
@@ -148,6 +247,31 @@ section h2:hover {
 
     section h2 {
         font-size: 1.5em;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    #nav-ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar a {
+        padding: 1rem;
+        font-size: 18px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .project-tile img {
+        width: 90vw;
     }
 }
 
@@ -391,15 +515,48 @@ footer a:hover {
     color: var(--button-link-hover);
 }
 
+/* Footer */
+.footer {
+    background-color: var(--section-bg); /* Use existing section background color */
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-text-color); /* Use existing light grey text color */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 /* Contact Form Styling */
 #contact {
-    padding: 40px 20px;
-    background-color: var(--section-bg); /* Soft light purple background */
+    background-color: var(--section-bg); /* Use existing section background color */
     text-align: center;
+    padding: 4rem 2rem;
     animation: fadeIn 1s ease-out forwards;
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.contact-list a {
+    display: inline-block;
+    color: var(--primary-text-color); /* Use existing light grey text color */
+    font-size: 20px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-list li a:hover {
+    transform: translateY(-5px);
+    color: var(--accent-color); /* Use existing accent color */
 }
 
 #contact h2 {
@@ -643,6 +800,11 @@ footer a:hover {
 
     footer p, footer ul li a {
         font-size: 0.8em; /* Smaller footer font size */
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 0.5rem;
     }
 }
 
